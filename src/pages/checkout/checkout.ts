@@ -318,13 +318,8 @@ export class CheckoutPage {
     if(distancia > this.planta.radio__c){
       let alert = this.alertCtrl.create({
         title: 'Salida Laboral',
-        subTitle: 'Usted se encuentra a una distancia mayor a la establecida para realizar la Salida. ¿Desea continuar?',
-        buttons: [{
-          text: 'Aceptar',
-          handler: data => {
-            this.postAsistencia();
-          }
-        }, 'Cancelar']
+        subTitle: 'Usted se encuentra a una distancia mayor a la establecida para realizar la Salida.',
+        buttons: ['Aceptar']
       });
       alert.present();
     }else{
